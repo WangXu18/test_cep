@@ -1,0 +1,117 @@
+#define RSCL32(a,b,c,d)   0x ## c ## d, 0x ## a ## b
+#define LC(a,b,c,d)       #d, #c, #b, #a
+#define RSCS32(a)         a, 0
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16000,
+	"Generic Plug-in\n\nVersion CC 2019 Release 1 (10/2/2018)\n?1?7 1990-2018 Adobe. All rights reserved.\nAn example plug-in module for Adobe Photoshop?1?7."
+END
+
+18008  PiPL  DISCARDABLE
+BEGIN
+	1, /* First byte must always be 1 */
+	0L, /* kCurrentPiPL Version */
+	    9L, /* Property count */
+	"MIB8", /* '8BIM' */
+	"dnik", /* 'kind' PIKindProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	"MFB8", /* '8BFM' Photoshop Filter plug-in */
+
+	"MIB8", /* '8BIM' */
+	"eman", /* 'name' PINameProperty */
+	0L, /* Index */
+	   16L, /* Length */
+	"\016FilterTutorial\0", 
+
+	"MIB8", /* '8BIM' */
+	"gtac", /* 'catg' PICategoryProperty */
+	0L, /* Index */
+	   12L, /* Length */
+	"\012**Hidden**\0", 
+
+	"MIB8", /* '8BIM' */
+	"srev", /* 'vers' PIVersionProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	0X00040000L, /* (Major << 16) | Minor */
+
+	"MIB8", /* '8BIM' */
+	"tpmc", /* 'cmpt' PIComponent */
+	0L, /* Index */
+	   20L, /* Length */
+	1310720L, /* Version */
+	"FilterTutorial\0\0", /* Unique ID */
+
+	"MIB8", /* '8BIM' */
+	"4668", /* '8664' PIWin64X86CodeProperty */
+	0L, /* Index */
+	   12L, /* Length */
+	"PluginMain\0\0", 
+
+	"MIB8", /* '8BIM' */
+	"lbne", /* 'enbl' EnableInfoProperty */
+	0L, /* Index */
+	    8L, /* Length */
+	"true\0\0\0\0", 
+
+	"MIB8", /* '8BIM' */
+	"mtsh", /* 'hstm' PITerminology */
+	0L, /* Index */
+	   56L, /* Length */
+	0L, /* Version */
+	"tliF", /* Class ID */
+	"tlif", /* Event ID */
+	18008, /* Terminology ID */
+	"e02828c8-69af-4977-9294-b3221dbcec49\0\0\0\0", /* Unique string */
+	    0, /* Padding */
+
+	"MIB8", /* '8BIM' */
+	"icif", /* 'fici' PIFilterCaseInfoProperty */
+	0L, /* Index */
+	   28L, /* Length */
+	0X00060404L, 
+	0X000E0404L, 
+	0X000E0404L, 
+	0X00060404L, 
+	0X000E0404L, 
+	0X00060404L, 
+	0X000E0404L, 
+
+END
+
+18008  aete  DISCARDABLE
+BEGIN
+	1, /* First byte must always be 1 */
+	0X0001, /* majorVersion|minorVersion */
+	0, /* language */
+	0, /* script */
+	    1, /* Suite Count */
+	"\014memyselfandi", 
+	"\136A filter plug in for Adobe Photoshop that retrieves pixel data info from the current document.", 
+	"tliF", /* Suite ID */
+	1, /* Suite level */
+	1, /* Suite version */
+	    1, /* Event Count */
+	"\016FilterTutorial", 
+	"\136A filter plug in for Adobe Photoshop that retrieves pixel data info from the current document.", 
+	"tliF", /* Event class */
+	"tlif", /* Descriptor type */
+	"llun", /* Reply type */
+	"\000", 
+	000000, /* Flags */
+	"RmI#", /* Direct param type */
+	"\000", 
+	0XB000, /* Direct params */
+	    1, /* Parameter Count */
+	"\007trigger", 
+	" rgT", 
+	"rgTT", 
+	"\025Activates the filter.", 
+	000000, /* Param flags */
+	    0, /* Class count */
+	0, /* Number of comparison ops (always 0) */
+	    0, /* Enum count */
+END
+
